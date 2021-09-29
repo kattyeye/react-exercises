@@ -1,14 +1,37 @@
 import { useState, useEffect } from 'react';
+import TitleList from './TitleList';
+import BlogBody from './BlogBody';
+import BlogPostForm from '../BlogPostForm/BlogPostForm';
 
 
 function BlogReadingApp() {
 
 
-    const [showBlogPost, setShowBlogPost] = useState(false);
-    const [showBlogPost2, setShowBlogPost2] = useState(false);
-    const [showBlogPost3, setShowBlogPost3] = useState(false);
+    const [blogTitle, setBlogTitle] = useState('');
+    const [blogBody, setBlogBody] = useState('');
+    const [blogs, setBlogs] = useState([]);
 
 
+
+    useEffect(() => {
+        setBlogs([
+            {
+                id:1,
+                blogTitle: 'Jimmy Goes to Publix',
+                blogBody: 'Sed ullamcorper ullamcorper lacus ut consequat. Sed cursus, nisi vitae vulputate maximus, nibh enim cursus ipsum, non iaculis massa elit sed urna. Pellentesque tincidunt placerat metus sed feugiat. Nunc imperdiet quis sem sagittis aliquet. Curabitur et egestas dui, a ultrices tortor. Integer ac vehicula neque, a molestie mauris. Cras rutrum tristique nibh, at accumsan est dictum ac.'
+            },
+            {
+                id:2,
+                blogTitle: 'Jimmy Goes to Publix',
+                blogBody: 'Sed ullamcorper ullamcorper lacus ut consequat. Sed cursus, nisi vitae vulputate maximus, nibh enim cursus ipsum, non iaculis massa elit sed urna. Pellentesque tincidunt placerat metus sed feugiat. Nunc imperdiet quis sem sagittis aliquet. Curabitur et egestas dui, a ultrices tortor. Integer ac vehicula neque, a molestie mauris. Cras rutrum tristique nibh, at accumsan est dictum ac.'
+            },
+            {
+                id:3,
+                blogTitle: 'Jimmy Goes to Publix',
+                blogBody: 'Sed ullamcorper ullamcorper lacus ut consequat. Sed cursus, nisi vitae vulputate maximus, nibh enim cursus ipsum, non iaculis massa elit sed urna. Pellentesque tincidunt placerat metus sed feugiat. Nunc imperdiet quis sem sagittis aliquet. Curabitur et egestas dui, a ultrices tortor. Integer ac vehicula neque, a molestie mauris. Cras rutrum tristique nibh, at accumsan est dictum ac.'
+            },
+        ])
+    }, []);
 
 
 
@@ -16,41 +39,9 @@ function BlogReadingApp() {
 
     return (
         <main>
-
-
-            <aside style={{
-                display: 'flex', width: '25%',
-            flexDirection:'column'}}>
-                    {showBlogPost &&
-                        <div> <button onClick={() => { setShowBlogPost(false) }}>Title of Blog</button>
-                            <p>Etiam scelerisque diam ac enim gravida, et dapibus massa consequat. Integer interdum diam non ante fringilla rhoncus. Vivamus dictum lacus porttitor leo pellentesque, quis accumsan velit sagittis. Phasellus a convallis ante, nec rhoncus mi. Suspendisse potenti. Proin vulputate eget metus a tristique. Integer vehicula aliquam tempor. Donec vulputate risus ac sem vestibulum, a convallis augue rutrum. Donec interdum a orci eu ultrices.</p>
-                        </div>
-
-                    }
-                    {!showBlogPost &&
-                        <button onClick={() => { setShowBlogPost(true) }}>Title of Blog</button>
-                    }
-
-                {showBlogPost2 &&
-                     <div> <button onClick={() => { setShowBlogPost2(false) }}>Title of Blog</button>
-                            <p>Etiam scelerisque diam ac enim gravida, et dapibus massa consequat. Integer interdum diam non ante fringilla rhoncus. Vivamus dictum lacus porttitor leo pellentesque, quis accumsan velit sagittis. Phasellus a convallis ante, nec rhoncus mi. Suspendisse potenti. Proin vulputate eget metus a tristique. Integer vehicula aliquam tempor. Donec vulputate risus ac sem vestibulum, a convallis augue rutrum. Donec interdum a orci eu ultrices.</p>
-                        </div>
-                }
-                {!showBlogPost2 &&
-                        <button onClick={() => { setShowBlogPost2(true) }}>Title of Blog</button>
-                }
-
-                {showBlogPost3 &&
-                     <div> <button onClick={() => { setShowBlogPost3(false) }}>Title of Blog</button>
-                            <p>Etiam scelerisque diam ac enim gravida, et dapibus massa consequat. Integer interdum diam non ante fringilla rhoncus. Vivamus dictum lacus porttitor leo pellentesque, quis accumsan velit sagittis. Phasellus a convallis ante, nec rhoncus mi. Suspendisse potenti. Proin vulputate eget metus a tristique. Integer vehicula aliquam tempor. Donec vulputate risus ac sem vestibulum, a convallis augue rutrum. Donec interdum a orci eu ultrices.</p>
-                        </div>
-                }
-                {!showBlogPost3 &&
-                        <button onClick={() => { setShowBlogPost3(true) }}>Title of Blog</button>
-                }
-
-                 </aside>
-
+            hey!
+            <TitleList blogs={blogs} />
+            <BlogBody />
         </main>
 
 
