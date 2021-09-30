@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react';
 import TitleList from './TitleList';
 import BlogBody from './BlogBody';
-import BlogPostForm from '../BlogPostForm/BlogPostForm';
 
 
 function BlogReadingApp() {
 
 
     const [blogTitle, setBlogTitle] = useState('');
-    const [blogBody, setBlogBody] = useState('');
+    // const [blogBody, setBlogBody] = useState('');
     const [blogs, setBlogs] = useState([]);
 
 
@@ -34,14 +33,20 @@ function BlogReadingApp() {
     }, []);
 
 
+    // console.log({ blogs });
+
+
+
+
+
 
 
 
     return (
         <main>
-            hey!
+
             <TitleList blogs={blogs} />
-            <BlogBody />
+            <BlogBody blogs={blogs} />
         </main>
 
 

@@ -5,27 +5,20 @@ function TitleList(props) {
 
     const [showBlogPost, setShowBlogPost] = useState(false);
 
-    const blogsHTML = props.blogs.map(blog => (
-        <article>
-            <h3>{blog.blogTitle}</h3>
-            <p>{blog.blogBody}</p>
-        </article>
+    const blogTitlesHTML = props.blogs.map(blog => (
+        <li>
+            <button>{blog.blogTitle}</button>
+        </li>
     ))
 
-
+    // console.log({blogsHTML})
 
 
 
 
     return (
         <ul>
-            {showBlogPost &&
-                <div>
-                    <button onClick={() => setShowBlogPost(false)} type="button">Show Post</button>
-                        {blogsHTML}
-                </div>
-            }
-
+            <button type="button" onClick={() => {setShowBlogPost(false)}}>{blogTitlesHTML}</button>
         </ul>
     )
 

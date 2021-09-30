@@ -1,28 +1,27 @@
-function BookmarkingApp(props) {
+import { useState } from "react";
+import BookmarkingForm from "./BookmarkingForm";
+
+function BookmarkingApp() {
+
+
+
+
+    // function addBookmark(url, title, tag) {
+    //     const newBookmark = { id: counter, url, text };
+    //     setImages([...images, newImage]);
+    //     console.log({ images })
+    //     setCounter(counter + 1);
+    //     console.log({ images })
+    // }
 
 
 
     return (
-        <div>
-            <nav>
-                <ul>
-                    <li><button type="button">Tag</button></li> {/* should filter by tag, 3 of these? */}
-                    <li><button type="button">Tag</button></li> {/* should filter by tag, 3 of these? */}
-                    <li><button type="button">Tag</button></li> {/* should filter by tag, 3 of these? */}
-
-                </ul>
-            </nav>
-
-        <form>
-            <h2><label>Bookmarking Form</label></h2>
-            <input type="url"></input>
-            <input type="text"></input>
-            <input type="text"></input>
-        </form>
-        </div>
-
-
+        <BookmarkingForm />
     )
+
+
 }
+
 
 export default BookmarkingApp;
