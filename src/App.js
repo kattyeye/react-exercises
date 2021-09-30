@@ -3,7 +3,7 @@ import './App.css';
 import BlogPostForm from './components/BlogPostForm/BlogPostForm'
 import ContactForm from './components/ContactForm/ContactForm'
 import BlogReadingApp from './components/BlogReadingApp/BlogReadingApp'
-import BookmarkingApp from './components/BookmarkingApp/BookmarkingApp'
+import BookmarkingApp from './components/BookmarkingApp/BookmarkingForm'
 import BlogAppFull from './components/BlogAppFull/BlogAppFull'
 
 function App() {

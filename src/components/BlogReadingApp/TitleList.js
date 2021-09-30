@@ -3,12 +3,15 @@ import { useState } from 'react';
 
 function TitleList(props) {
 
-    const [showBlogPost, setShowBlogPost] = useState(false);
+    // const [showBlogPost, setShowBlogPost] = useState(false);
 
     const blogTitlesHTML = props.blogs.map(blog => (
-        <li>
-            <button>{blog.blogTitle}</button>
-        </li>
+        <aside style={{ width:'30%'}}>
+            <li >
+                <button type="button" onClick={() => props.selectBlog(blog.id)}>{blog.title}</button>
+            </li>
+        </aside>
+
     ))
 
     // console.log({blogsHTML})
@@ -18,7 +21,7 @@ function TitleList(props) {
 
     return (
         <ul>
-            <button type="button" onClick={() => {setShowBlogPost(false)}}>{blogTitlesHTML}</button>
+            {blogTitlesHTML}
         </ul>
     )
 
