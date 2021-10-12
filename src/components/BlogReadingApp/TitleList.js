@@ -4,7 +4,7 @@ function TitleList(props) {
   // const [showBlogPost, setShowBlogPost] = useState(false);
 
   const blogTitlesHTML = props.blogs.map((blog) => (
-    <aside style={{ width: "30%" }}>
+    <aside>
       <div class="btn-group-vertical" style={{ padding: "10px" }}>
         <button
           class="btn btn-info btn-large"
