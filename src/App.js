@@ -5,6 +5,7 @@ import ContactForm from "./components/ContactForm/ContactForm";
 import BlogReadingApp from "./components/BlogReadingApp/BlogReadingApp";
 import BookmarkingApp from "./components/BookmarkingApp/BookmarkingApp";
 import BlogAppFull from "./components/BlogAppFull/BlogAppFull";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [selection, setSelection] = useState("blogForm");
